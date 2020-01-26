@@ -1,4 +1,5 @@
 import express from "express"
+import path from "path"
 import bodyParser from "body-parser"
 import cors from "cors"
 import morgan from "morgan"
@@ -15,8 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Register api routes
 app.use("/api/v1/movies", movies)
 app.use("/api/v1/user", users)
-app.use("/status", express.static("build"))
-app.use("/", express.static("build"))
-app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
+app.use(express.static(path.join(__dirname, "../build")))
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../build", "index.html"))
+})
 
 export default app
