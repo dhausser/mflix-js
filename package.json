@@ -55,9 +55,7 @@
     "mongodb": "^3.1.6",
     "morgan": "^1.9.1",
     "prettier": "^1.14.3",
-    "sinon": "^5.0.10"
-  },
-  "devDependencies": {
+    "sinon": "^5.0.10",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
@@ -71,5 +69,6 @@
     "jest-express": "^1.6.0",
     "lint-staged": "^7.3.0",
     "nodemon": "^1.17.5"
-  }
+  },
+  "devDependencies": {}
 }
